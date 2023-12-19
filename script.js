@@ -25,6 +25,9 @@ function checkDraw() {
 function checkOver() {
     var count1 = 0;
     var count2 = 0;
+    var count3 = 0;
+    var count4 = 0;
+    
     for (let j = 0; j < 3; j++) {
         var row = document.getElementsByClassName("r-"+j);
         for (var i = 0; i < row.length; i++) {
@@ -64,6 +67,31 @@ function checkOver() {
         }
         count1=0;
         count2=0;
+    }
+    for (let j = 0; j < 3; j++) {
+        var row = document.getElementsByClassName("c-"+j);
+        for (var i = 0; i < row.length; i++) {
+            if (row[i].innerText == "1" && i==j) {
+                count3++;
+            }
+            else if (row[i].innerText == "-1" && i==j) {
+                count4++;
+            }
+
+            else if (row[row.length-1-i].innerText == "1" && i==j) {
+                count3++;
+            }
+            else if (row[row.length-1-i].innerText == "-1" && i==j) {
+                count4++;
+            }
+
+            if (count3 == 3) {
+                console.log("player1Won");
+            }
+            if (count4 == 3) {
+                console.log("player2Won");
+            }
+        }
     }
     checkDraw();
 }
