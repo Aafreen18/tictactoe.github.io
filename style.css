@@ -1,0 +1,34 @@
+body{
+    background-image: url("backImage.avif");
+    background-size: cover;
+}
+
+h1{
+    padding-left: 550px;
+    padding-top: 100px;
+    font-weight: 900;
+    font-family: Georgia;
+}
+
+.container{
+    margin-top: 100px;
+}
+
+.fa-regular{
+    background-color: black;
+}
+
+.fa-solid{
+    margin-left: 8px;
+    color: white;
+}
+
+p{
+    font-weight: 900;
+    font-size: 80px;
+    padding-top: 60px;
+    padding-left: 630px;
+    color: black;
+    font-family: serif;
+}
+

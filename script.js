@@ -11,17 +11,21 @@ var draw = false;
 var gameOver = false;
 function printWinner(count1,count2)
 {
+    let p = document.querySelector("p");
     if (count1 == 3) {
         console.log("player1Won");
         gameOver = true;
+        p.innerHTML = "Player 1 won!";
     }
     else if (count2 == 3) {
         console.log("player2Won");
         gameOver = true;
+        p.innerHTML = "Player 2 won!";
     }
 }
 function checkDraw() {
     var cells = document.getElementsByClassName("cell");
+    let p = document.querySelector("p");
     draw=true;
     for (var i = 0; i < cells.length; i++) {
         if (cells[i].querySelector("i").getAttribute("class") == "fa-regular fa-square-full") {
@@ -31,6 +35,7 @@ function checkDraw() {
     if (draw) {
         gameOver = true;
         console.log("draw");
+        p.innerHTML = "Draw!";
     }
     
 }
