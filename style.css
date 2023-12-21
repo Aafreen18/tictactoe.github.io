@@ -1,6 +1,7 @@
 body{
     background-image: url("backImage.avif");
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 h1{
@@ -8,6 +9,7 @@ h1{
     padding-top: 100px;
     font-weight: 900;
     font-family: Georgia;
+    position: relative;
 }
 
 .container{
@@ -30,5 +32,6 @@ p{
     padding-left: 630px;
     color: black;
     font-family: serif;
+    position: relative;
 }
 
