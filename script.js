@@ -11,7 +11,7 @@ var draw = false;
 var gameOver = false;
 function printWinner(count1,count2)
 {
-    let p = document.querySelector("p");
+    let p = document.querySelector(".message");
     if (count1 == 3) {
         console.log("player1Won");
         gameOver = true;
@@ -25,7 +25,7 @@ function printWinner(count1,count2)
 }
 function checkDraw() {
     var cells = document.getElementsByClassName("cell");
-    let p = document.querySelector("p");
+    let p = document.querySelector(".message");
     draw=true;
     for (var i = 0; i < cells.length; i++) {
         if (cells[i].querySelector("i").getAttribute("class") == "fa-regular fa-square-full") {
