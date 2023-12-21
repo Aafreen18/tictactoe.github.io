@@ -36,7 +36,6 @@ function checkDraw() {
         gameOver = true;
         console.log("draw");
         p.innerHTML = "Draw!";
-        p.style.marginLeft="600px";
     }
     
 }
