@@ -49,6 +49,7 @@ body {
     margin: auto;
     width: 100%;
     padding: 10px;
+    color: black;
 }
 
 .holder {
@@ -91,7 +92,7 @@ body {
 }
 
 .fa-regular {
-    background-color: black;
+    color: white;
 }
 
 .fa-solid {
@@ -99,3 +100,10 @@ body {
     color: white;
 }
 
+.local
+{
+    text-decoration: none;
+    font-size: 3vmax;
+    width: 33%;
+    height: 33%;
+}
