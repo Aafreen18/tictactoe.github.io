@@ -115,7 +115,7 @@ function checkOver() {
 }
 
 function Put(obj) {
-    if (obj.querySelector("i").getAttribute("class") != "fa-regular fa-square-full") {
+    if (obj.querySelector("i").getAttribute("class") != "fa-regular fa-square-full" || gameOver==true) {
         return;
     }
 
