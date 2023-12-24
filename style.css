@@ -11,6 +11,7 @@ body {
     background: radial-gradient(circle at top left, #ff9703 0%, #ed1533 33%, #d70862 66%, #9118a1 100%);
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 
 @media only screen and (max-width: 992px) {
@@ -97,3 +98,4 @@ body {
 
     color: white;
 }
+
