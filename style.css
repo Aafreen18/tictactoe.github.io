@@ -111,3 +111,7 @@ button{
     background: linear-gradient(to right,#FF5CCC,#DC52BF,#B947B1,#973DA4,#743296,#512889);
     position: relative;
 }
+.replayButton
+{
+    display: none;
+}

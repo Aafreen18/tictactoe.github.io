@@ -17,6 +17,7 @@ function resetGame(){
     Btn.innerHTML = "";
     Btn.style.visibility="hidden";
     message.style.display="none";
+    displayed();
 
 }
 
@@ -39,7 +40,7 @@ function printWinner(count1,count2)
         p.innerHTML = "Player 1 won!";
         Btn.style.visibility="visible";
         Btn.innerHTML = "Play Again";
-        displayed();
+        
         content.style.display="none";
         Btn.addEventListener("click",resetGame);
     }
@@ -51,7 +52,7 @@ function printWinner(count1,count2)
         p.innerHTML = "Player 2 won!";
         Btn.style.visibility="visible";
         Btn.innerHTML = "Play Again";
-        displayed();
+        
         content.style.display="none";
         Btn.addEventListener("click",resetGame);
     }
@@ -72,7 +73,7 @@ function checkDraw() {
         p.innerHTML = "Draw!";
         Btn.style.visibility="visible";
         Btn.innerHTML = "Play Again";
-        displayed();
+        
         content.style.display="none";
         Btn.addEventListener("click",resetGame);
     }
