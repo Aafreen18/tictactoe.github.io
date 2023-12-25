@@ -16,34 +16,32 @@ body {
 
 @media only screen and (max-width: 992px) {
     .message {
-        font-size: 6vmax;
+        font-size: 4vmax;
         font-family: Georgia;
         text-align: center;
         margin: auto;
         width: 100%;
         position: relative;
         color: black;
-        top: 60%;
     }
 }
 
 @media only screen and (min-width: 993px) {
     .message {
-        font-size: 6vmax;
+        font-size: 4vmax;
         font-family: Georgia;
         text-align: center;
         margin: auto;
         width: 100%;
         position: relative;
         color: black;
-        top: 55%;
     }
 }
 
 
 .header {
 
-    font-size: 7vmax;
+    font-size: 6vmax;
     font-family: Georgia;
     text-align: center;
     margin: auto;
@@ -107,4 +105,9 @@ body {
     width: 33%;
     height: 40%;
     color: white;
+}
+
+button{
+    background: linear-gradient(to right,#FF5CCC,#DC52BF,#B947B1,#973DA4,#743296,#512889);
+    position: relative;
 }
