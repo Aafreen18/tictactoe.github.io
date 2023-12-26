@@ -1,4 +1,4 @@
-window.onload = displayed;
+window.onload = displayed();
 function displayed() {
     var cells = document.getElementsByClassName("cell");
     
@@ -15,10 +15,8 @@ function resetGame(){
     content.style.display="flex";
     p.innerHTML = "";
     Btn.innerHTML = "";
-    Btn.style.visibility="hidden";
     message.style.display="none";
     displayed();
-
 }
 
 var Player_Turn = false;
@@ -26,34 +24,34 @@ var draw = false;
 var gameOver=false;
 var cells = document.getElementsByClassName("cell");
 var p = document.querySelector("p");
-var Btn = document.querySelector("button");
+var Btn = document.getElementById("Btn");
 var content = document.querySelector(".content");
 var message = document.querySelector(".message");
 message.style.display="none";
+var menu = document.getElementById("menu");
 function printWinner(count1,count2)
 {
+    
     if (count1 == 3) {
         console.log("player1Won");
         gameOver = true;
+        content.style.display="none";
         message.style.height="50%";
         message.style.display="block";
         p.innerHTML = "Player 1 won!";
-        Btn.style.visibility="visible";
         Btn.innerHTML = "Play Again";
-        
-        content.style.display="none";
+        menu.innerHTML = "GO TO MENU";
         Btn.addEventListener("click",resetGame);
     }
     else if (count2 == 3) {
         console.log("player2Won");
         gameOver = true;
+        content.style.display="none";
         message.style.height="50%";
         message.style.display="block";
         p.innerHTML = "Player 2 won!";
-        Btn.style.visibility="visible";
         Btn.innerHTML = "Play Again";
-        
-        content.style.display="none";
+        menu.innerHTML = "GO TO MENU";
         Btn.addEventListener("click",resetGame);
     }
     
@@ -67,14 +65,13 @@ function checkDraw() {
     }
     if (draw) {
         gameOver = true;
+        content.style.display="none";
         message.style.height="50%";
         message.style.display="block";
         console.log("draw");
         p.innerHTML = "Draw!";
-        Btn.style.visibility="visible";
         Btn.innerHTML = "Play Again";
-        
-        content.style.display="none";
+        menu.innerHTML = "GO TO MENU";
         Btn.addEventListener("click",resetGame);
     }
     
