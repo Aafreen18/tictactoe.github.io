@@ -38,7 +38,7 @@ function printWinner(count1,count2)
         content.style.display="none";
         message.style.height="50%";
         message.style.display="block";
-        p.innerHTML = "Player 1 won!";
+        p.innerHTML = "Player won!";
         Btn.innerHTML = "Play Again";
         menu.innerHTML = "GO TO MENU";
         Btn.addEventListener("click",resetGame);
@@ -158,21 +158,38 @@ function Put(obj) {
 
         console.log(icon, icon.className);
     }
-
+    if(robotTurn()){
         setter_value = "-1";
         Player_Turn = false;
-        let idx;
+        var idx;
         do {
-            idx = Math.floor(Math.random() * 10);
+            
+            idx = Math.floor(Math.random() * (9));
+            console.log(idx);
         } while (
-            cells[idx].querySelector("i").className === "fa-solid fa-0" ||
-            cells[idx].querySelector("i").className === "fa-solid fa-xmark"
+            cells[idx].querySelector("i").className == "fa-solid fa-0" ||
+            cells[idx].querySelector("i").className == "fa-solid fa-xmark"
         );
         cells[idx].querySelector("i").className = "fa-solid fa-xmark";
 
         console.log(icon, icon.className);
-    
+        }
     console.log(setter_value, obj);
     checkOver();
+}
+
+function robotTurn()
+{
+    var emptycell = 0;
+    for (var i = 0; i < cells.length; i++) {
+        if (cells[i].querySelector("i").getAttribute("class") == "fa-regular fa-square-full") {
+            emptycell += 1;
+        }
+    }
+    if(emptycell == 1)
+    {
+        return false;
+    }
+    return true;
 }
 
