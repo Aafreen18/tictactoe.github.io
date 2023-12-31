@@ -158,7 +158,7 @@ function Put(obj) {
 
         console.log(icon, icon.className);
     }
-    if(robotTurn()){
+    if(robotTurn()==true){
         setter_value = "-1";
         Player_Turn = false;
         var idx;
@@ -186,7 +186,7 @@ function robotTurn()
             emptycell += 1;
         }
     }
-    if(emptycell == 1)
+    if(emptycell <= 1)
     {
         return false;
     }
